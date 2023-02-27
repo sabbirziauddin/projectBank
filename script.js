@@ -60,17 +60,17 @@ const section1 = document.querySelector('#section--1');
 //add evemt listner to btnScrollTo button
 
 btnScrollTo.addEventListener("click", function (e) {
-   const s1Coard = section1.getBoundingClientRect()
-    console.log(s1Coard);
+  const s1Coard = section1.getBoundingClientRect();
+  console.log(s1Coard);
   console.log(e.target.getBoundingClientRect());
   //scrooling
-  window.scrollTo({
-    left:s1Coard.left +window.pageXOffset,
-    top:s1Coard.top + window.pageYOffset,
-    behavior:'smooth',
+  //   window.scrollTo({
+  //     left:s1Coard.left +window.pageXOffset,
+  //     top:s1Coard.top + window.pageYOffset,
+  //     behavior:'smooth',
 
+  //   }
 
-  }
-    
-  );
+  //   );
+  section1.scrollIntoView({ behavior: "smooth" });
 });
