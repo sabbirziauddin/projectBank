@@ -42,5 +42,13 @@ header.after(message);
 document
   .querySelector(".btn--close--cookie")
   .addEventListener("click", function () {
-    message.remove();
+    message.remove(); //same for delete message.parentElement.removeChild(message);
   });
+//styles attribute and classes
+message.style.backgroundColor = "#37383d";
+message.style.width = "120%";
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+//Change the color property
+document.documentElement.style.setProperty("--color-primary", "violet");
